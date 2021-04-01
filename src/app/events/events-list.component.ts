@@ -7,8 +7,15 @@ import { ToastrService } from '../common/toastr.service';
   template: `
     <h1>Upcoming Angular Events</h1>
     <hr />
-    <event-thumbnail #thumbnail *ngFor="let event of events" [event]="event" (click)="handlerThumbnailClick(event.name)"></event-thumbnail>
-  `
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6" *ngFor="let event of events">
+          <event-thumbnail #thumbnail [event]="event" (click)="handlerThumbnailClick(event.name)"></event-thumbnail>
+        </div>
+      </div>
+    </div>
+  `,
+  styles:[]
 })
 export class EventsListComponent implements OnInit {
   events: any[] = [];
