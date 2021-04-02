@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  templateUrl: './events-create.component.html'
+  templateUrl: './event-create.component.html'
 })
 export class EventCreateComponent {
+  isDirty: boolean = true;
   constructor(private router: Router){}
 
   cancel() {

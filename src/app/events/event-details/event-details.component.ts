@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { EventService } from '../shared/event.service';
 
 @Component({
-  templateUrl: './events-details.component.html',
+  templateUrl: './event-details.component.html',
   styles: [`
     .event-image {
       height: 100px;

@@ -6,8 +6,11 @@ import { EventsListComponent } from './events/events-list.component';
 import { EventThumbnail } from './events/event-thumbnail.component';
 import { EventService } from './events/shared/event.service';
 import { ToastrService } from './common/toastr.service';
-import { EventDetailsComponent } from './events/events-details/events-details.component';
-import { EventCreateComponent } from './events/events-create/events-create.component';
+import { EventDetailsComponent } from './events/event-details/event-details.component';
+import { EventCreateComponent } from './events/event-create/event-create.component';
+import { Error404Component } from './errors/404.component';
+import { EventRouteActivator } from './events/event-details/event-route-activator.service';
+import { EventCreateRouteDeactivator } from './events/event-create/event-create-route-deactivator.service';
 import { Navbar } from './nav/navbar.component';
 import { AppRouterModule } from './app.routes.module';
 
@@ -23,8 +26,9 @@ import { AppRouterModule } from './app.routes.module';
     EventDetailsComponent,
     EventCreateComponent,
     Navbar,
+    Error404Component,
   ],
-  providers: [EventService, ToastrService],
+  providers: [EventService, ToastrService, EventRouteActivator, EventCreateRouteDeactivator],
   bootstrap: [AppEvents]
 })
 export class AppModule { }
